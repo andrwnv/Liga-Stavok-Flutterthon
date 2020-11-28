@@ -20,6 +20,8 @@ class _GameWidgetState extends State<GameWidget> {
   String _gameInfo = 'Чемпоинская лига';
 
   String _gameStatus = 'Live';
+  int _homeScore  = 4;
+  int _guestScore = 0;
 
   @override
   Widget build(BuildContext context) {
@@ -71,6 +73,7 @@ class _GameWidgetState extends State<GameWidget> {
                               children: [
                                 Text('$_gameStatus'),
                                 Container(
+                                  margin: const EdgeInsets.only(left: 6),
                                   width: 7, 
                                   height: 7, 
                                   decoration: BoxDecoration(
@@ -120,7 +123,21 @@ class _GameWidgetState extends State<GameWidget> {
                         Text('CHELSEA')
                       ],
                     ),
-                    Text('a'),
+                    Column(
+                      children: <Widget>[
+                        Row(
+                          children: <Widget>[
+                            Text('$_homeScore', style: TextStyle(color: AppColorSheme.primary12, fontSize: 36)),
+                            Text(':', style: TextStyle(color: AppColorSheme.gray22, fontSize: 36)),
+                            Text('$_guestScore', style: TextStyle(color: AppColorSheme.primary12.withOpacity(0.5), fontSize: 36)),
+                          ],
+                        ),
+                        Icon(
+                          Icons.arrow_drop_down,
+                          size: 30      
+                        )
+                      ],
+                    ),
                     Column(
                       children: <Widget>[
                         Container(
