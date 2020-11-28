@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 
-class ColorSheme {
+class AppColorSheme {
   // Green colors (from dark to light).
   static final Color primary      = Color(0xFF009A6E);
   static final Color primaryDark  = Color(0xFF006A4A);
